@@ -27,7 +27,7 @@ body
 }
 .stat
 {
-    padding-top: 100px;
+    padding-top: 200px;
 }
   table
   {
@@ -51,12 +51,6 @@ body
     height: 50px;
   }
 
-  /* td{
-    border-bottom: 1px solid #F9FAFB;
-    border-collapse: collapse;
-    text-align: left;
-    padding: 8px;
-  } */
   td
   {
     padding-left: 10px;
@@ -105,11 +99,7 @@ body
         border-radius: 16px;
         padding: 2px 8px 2px 6px;
     }
-    /* tbody > tr:hover{
-        background-color: rgba(255, 0, 0, 0.336);
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        color: #FFF;
-    } */
+
     .sts_draft
     {
       color: #ffffff;
@@ -229,7 +219,7 @@ and (max-device-width: 1024px)
 {
     text-align: center;
 }
-  /* Force table to not be like tables anymore */
+
   table, thead, tbody, th, td, tr {
       display: block;
       
@@ -239,7 +229,7 @@ and (max-device-width: 1024px)
     display: none;
   }
 
-  /* Hide table headers (but not display: none;, for accessibility) */
+  /* Hide table headers (but not display: none) */
   thead tr {
       position: absolute;
       top: -9999px;
@@ -259,10 +249,8 @@ th{
     vertical-align: middle;
 }
   td {
-      /* Behave  like a "row" */
       font-size: 16px;
       border: none;
-      /* border-bottom: 1px solid #eee; */
       position: relative;
       padding-left: 50%;
       padding-top: 10px;
@@ -272,10 +260,8 @@ th{
 
   td:before {
 
-      /* Now like a table header */
       position: absolute;
       font-weight: bold;
-      /* Top/left values mimic padding */
       top: 0;
       left: 6px;
       width: 45%;
@@ -284,9 +270,7 @@ th{
       white-space: nowrap;
   }
   td:before {
-    /* Now like a table header */
     position: absolute;
-    /* Top/left values mimic padding */
     top: 0;
     left: 6px;
     width: 45%;
@@ -299,6 +283,7 @@ th{
   Label the data
 You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
   */
+
   .booked td:nth-of-type(1):before { content: "Activities :"; }
   .booked td:nth-of-type(2):before { content: "Day :"; }
   .booked td:nth-of-type(3):before { content: "Level :"; }
